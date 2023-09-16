@@ -1,0 +1,28 @@
+[2023-09-15 07:55:31,174] INFO _log() L224  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.131:5000 - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:55:31,175] INFO _log() L224  [33mPress CTRL+C to quit[0m - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:17,617] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:17] "[32mGET / HTTP/1.1[0m" 302 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:17,624] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:17] "[32mGET /openapi HTTP/1.1[0m" 308 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:17,633] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:17] "GET /openapi/ HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:17,715] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:17] "GET /openapi/static/images/swagger.svg HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:17,717] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:17] "GET /openapi/static/images/rapidoc.svg HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:17,728] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:17] "GET /openapi/static/images/redoc.svg HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:17,775] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:17] "GET /openapi/static/images/apidoc.svg HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:20,224] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:20] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:20,242] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:20] "GET /openapi/static/css/swagger-ui.css HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:20,248] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:20] "GET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:20,248] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:20] "GET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:20,490] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:20] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:20,579] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:20] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:52,857] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:52] "[32mGET / HTTP/1.1[0m" 302 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:56:52,867] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:56:52] "GET /openapi/ HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:57:31,320] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:57:31] "POST /produto HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:57:34,146] WARNING add_produto() L54   Erro ao adicionar produto 'Banana Prata', Produto de mesmo nome já salvo na base :/ - call_trace=/home/ezava/mypyproject/desenvolvimento-full-stack/desenvolvimento-full-stack-basico/aula-3/meu_app_api/app.py L54  
+[2023-09-15 07:57:34,146] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:57:34] "[31m[1mPOST /produto HTTP/1.1[0m" 409 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:57:35,945] WARNING add_produto() L54   Erro ao adicionar produto 'Banana Prata', Produto de mesmo nome já salvo na base :/ - call_trace=/home/ezava/mypyproject/desenvolvimento-full-stack/desenvolvimento-full-stack-basico/aula-3/meu_app_api/app.py L54  
+[2023-09-15 07:57:35,946] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:57:35] "[31m[1mPOST /produto HTTP/1.1[0m" 409 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:57:36,869] WARNING add_produto() L54   Erro ao adicionar produto 'Banana Prata', Produto de mesmo nome já salvo na base :/ - call_trace=/home/ezava/mypyproject/desenvolvimento-full-stack/desenvolvimento-full-stack-basico/aula-3/meu_app_api/app.py L54  
+[2023-09-15 07:57:36,869] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:57:36] "[31m[1mPOST /produto HTTP/1.1[0m" 409 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-15 07:58:19,470] INFO _log() L224  127.0.0.1 - - [15/Sep/2023 07:58:19] "GET /produtos HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
