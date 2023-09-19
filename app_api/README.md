@@ -2,7 +2,7 @@
 
 Este projeto faz parte do MVP1 da Disciplina **Desenvolvimento Full Stack Básico** 
 
-O objetivo aqui é entender o funcionamento de uma plaicação web python 
+O objetivo aqui é entender o funcionamento de uma aplaicação web python 
 
 ---
 ## Como executar 

@@ -1,73 +1,69 @@
 from pydantic import BaseModel
 from typing import Optional, List
-from model.produto import Produto
+from model.fornecedor import Fornecedor
 
-from schemas import ComentarioSchema
+from schemas import CategoriaSchema
 
 
-class ProdutoSchema(BaseModel):
-    """ Define como um novo produto a ser inserido deve ser representado
+class FornecedorSchema(BaseModel):
+    """ Define como um novo fornecedor a ser inserido deve ser representado
     """
-    nome: str = "Banana Prata"
-    quantidade: Optional[int] = 12
-    valor: float = 12.50
+    nome: str = "Deposito Bebidas Brasil"
+    descricao: str = "Deposito de bebidas em geral"
 
 
-class ProdutoBuscaSchema(BaseModel):
+class FornecedorBuscaSchema(BaseModel):
     """ Define como deve ser a estrutura que representa a busca. Que será
-        feita apenas com base no nome do produto.
+        feita apenas com base no nome do fornecedor.
     """
     nome: str = "Teste"
 
 
-class ListagemProdutosSchema(BaseModel):
-    """ Define como uma listagem de produtos será retornada.
+class ListagemFornecedorSchema(BaseModel):
+    """ Define como uma listagem de fornecedor será retornada.
     """
-    produtos:List[ProdutoSchema]
+    fornecedor:List[FornecedorSchema]
 
 
-def apresenta_produtos(produtos: List[Produto]):
-    """ Retorna uma representação do produto seguindo o schema definido em
-        ProdutoViewSchema.
+def apresenta_fornecedores(fornecedores: List[Fornecedor]):
+    """ Retorna uma representação do fornecedor seguindo o schema definido em
+        FornecedorViewSchema.
     """
     result = []
-    for produto in produtos:
+    for fornecedor in fornecedores:
         result.append({
-            "nome": produto.nome,
-            "quantidade": produto.quantidade,
-            "valor": produto.valor,
+            "nome": fornecedor.nome,
+            "descricao": fornecedor.descricao
         })
 
-    return {"produtos": result}
+    return {"fornecedor": result}
 
 
-class ProdutoViewSchema(BaseModel):
-    """ Define como um produto será retornado: produto + comentários.
+class FornecedorViewSchema(BaseModel):
+    """ Define como um fornecedor será retornado: fornecedor + categorias.
     """
     id: int = 1
-    nome: str = "Banana Prata"
-    quantidade: Optional[int] = 12
-    valor: float = 12.50
-    total_cometarios: int = 1
-    comentarios:List[ComentarioSchema]
+    nome: str = "Deposito Bebidas Brasil"
+    descricao: str = "Deposito especializado em bebidas"
+    total_categorias: int = 1
+    categorias:List[CategoriaSchema]
 
 
-class ProdutoDelSchema(BaseModel):
+class FornecedorDelSchema(BaseModel):
     """ Define como deve ser a estrutura do dado retornado após uma requisição
         de remoção.
     """
     mesage: str
     nome: str
 
-def apresenta_produto(produto: Produto):
-    """ Retorna uma representação do produto seguindo o schema definido em
-        ProdutoViewSchema.
+def apresenta_fornecedor(fornecedor: Fornecedor):
+    """ Retorna uma representação do fornecedor seguindo o schema definido em
+        FornecedorViewSchema.
     """
     return {
-        "id": produto.id,
-        "nome": produto.nome,
-        "quantidade": produto.quantidade,
-        "valor": produto.valor,
-        "total_cometarios": len(produto.comentarios),
-        "comentarios": [{"texto": c.texto} for c in produto.comentarios]
+        "id": fornecedor.id,
+        "nome": fornecedor.nome,
+        "descricao": fornecedor.descricao,
+        "total_categoriass": len(fornecedor.categorias),
+        "categorias": [{"texto": c.texto} for c in fornecedor.categorias]
     }
