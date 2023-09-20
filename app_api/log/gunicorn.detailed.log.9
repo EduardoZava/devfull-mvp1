@@ -1,0 +1,110 @@
+[2023-09-19 22:46:21,228] ERROR log_exception() L1449 Exception on /fornecedores [GET] - call_trace=/home/ezava/.local/lib/python3.10/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: fornecedor
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ezava/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ezava/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 109, in wrapper
+    resp = _do_wrapper(
+  File "/home/ezava/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "/home/ezava/mypyproject/devfullmvp1/app_api/app.py", line 74, in get_fornecedores
+    fornecedores = session.query(Fornecedor).all()
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2772, in all
+    return self._iter().all()
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2907, in _iter
+    result = self.session.execute(
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1705, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 333, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1572, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1943, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2124, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: fornecedor
+[SQL: SELECT fornecedor.pk_fornecedor AS fornecedor_pk_fornecedor, fornecedor.nome AS fornecedor_nome, fornecedor.descricao AS fornecedor_descricao, fornecedor.data_insercao AS fornecedor_data_insercao 
+FROM fornecedor]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2023-09-19 22:46:21,230] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 22:46:21] "[35m[1mGET /fornecedores HTTP/1.1[0m" 500 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 22:46:21,368] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 22:46:21,369] ERROR log_exception() L1449 Exception on /fornecedores [GET] - call_trace=/home/ezava/.local/lib/python3.10/site-packages/flask/app.py L1449
+Traceback (most recent call last):
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: fornecedor
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ezava/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ezava/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 109, in wrapper
+    resp = _do_wrapper(
+  File "/home/ezava/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "/home/ezava/mypyproject/devfullmvp1/app_api/app.py", line 74, in get_fornecedores
+    fornecedores = session.query(Fornecedor).all()
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2772, in all
+    return self._iter().all()
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2907, in _iter
+    result = self.session.execute(
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1705, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 333, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1572, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1943, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2124, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: fornecedor
+[SQL: SELECT fornecedor.pk_fornecedor AS fornecedor_pk_fornecedor, fornecedor.nome AS fornecedor_nome, fornecedor.descricao AS fornecedor_descricao, fornecedor.data_insercao AS fornecedor_data_insercao 
+FROM fornecedor]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2023-09-19 22:46:21,371] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 22:46:21] "[35m[1mGET /fornecedores HTTP/1.1[0m" 500 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 22:46:37,358] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
