@@ -1,3 +1,36 @@
 [2023-09-19 23:09:20,403] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:09:20] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
 [2023-09-19 23:09:20,544] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
 [2023-09-19 23:09:20,546] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:09:20] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:08,920] INFO _log() L224  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.131:5000 - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:08,920] INFO _log() L224  [33mPress CTRL+C to quit[0m - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:09,106] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 23:18:09,115] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:18:09] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:09,240] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 23:18:09,243] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:18:09] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:09,366] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 23:18:09,368] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:18:09] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:09,493] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 23:18:09,495] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:18:09] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:09,632] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 23:18:09,635] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:18:09] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:09,767] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 23:18:09,769] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:18:09] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:09,895] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 23:18:09,898] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:18:09] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:10,024] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 23:18:10,027] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:18:10] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:10,163] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 23:18:10,166] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:18:10] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:10,297] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 23:18:10,300] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:18:10] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:10,432] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 23:18:10,434] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:18:10] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:10,561] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 23:18:10,564] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:18:10] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:10,691] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 23:18:10,694] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:18:10] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 23:18:10,853] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 23:18:10,855] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 23:18:10] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
