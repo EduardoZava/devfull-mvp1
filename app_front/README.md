@@ -1,8 +1,9 @@
 # Meu Front
 
-Este pequeno projeto faz parte do material diático da Disciplina **Desenvolvimento Full Stack Básico** 
+Este pequeno projeto cuida chamar as funcionalidades da api execuntado o frontend
+para completar a dinamica da single  page 
 
-O objetivo aqui é ilutsrar o conteúdo apresentado na terceira aula.
+O objetivo aqui é a dar capacidade ao front para atender as requisições do cliente.
 
 ---
 ## Como executar
