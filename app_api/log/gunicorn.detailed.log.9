@@ -1,4 +1,4 @@
-[2023-09-19 22:46:21,228] ERROR log_exception() L1449 Exception on /fornecedores [GET] - call_trace=/home/ezava/.local/lib/python3.10/site-packages/flask/app.py L1449
+[2023-09-19 22:46:51,982] ERROR log_exception() L1449 Exception on /fornecedores [GET] - call_trace=/home/ezava/.local/lib/python3.10/site-packages/flask/app.py L1449
 Traceback (most recent call last):
   File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
     self.dialect.do_execute(
@@ -51,9 +51,9 @@ sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: forne
 [SQL: SELECT fornecedor.pk_fornecedor AS fornecedor_pk_fornecedor, fornecedor.nome AS fornecedor_nome, fornecedor.descricao AS fornecedor_descricao, fornecedor.data_insercao AS fornecedor_data_insercao 
 FROM fornecedor]
 (Background on this error at: https://sqlalche.me/e/14/e3q8)
-[2023-09-19 22:46:21,230] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 22:46:21] "[35m[1mGET /fornecedores HTTP/1.1[0m" 500 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
-[2023-09-19 22:46:21,368] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
-[2023-09-19 22:46:21,369] ERROR log_exception() L1449 Exception on /fornecedores [GET] - call_trace=/home/ezava/.local/lib/python3.10/site-packages/flask/app.py L1449
+[2023-09-19 22:46:51,984] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 22:46:51] "[35m[1mGET /fornecedores HTTP/1.1[0m" 500 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 22:46:52,139] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 22:46:52,141] ERROR log_exception() L1449 Exception on /fornecedores [GET] - call_trace=/home/ezava/.local/lib/python3.10/site-packages/flask/app.py L1449
 Traceback (most recent call last):
   File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
     self.dialect.do_execute(
@@ -106,5 +106,5 @@ sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: forne
 [SQL: SELECT fornecedor.pk_fornecedor AS fornecedor_pk_fornecedor, fornecedor.nome AS fornecedor_nome, fornecedor.descricao AS fornecedor_descricao, fornecedor.data_insercao AS fornecedor_data_insercao 
 FROM fornecedor]
 (Background on this error at: https://sqlalche.me/e/14/e3q8)
-[2023-09-19 22:46:21,371] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 22:46:21] "[35m[1mGET /fornecedores HTTP/1.1[0m" 500 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
-[2023-09-19 22:46:37,358] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
+[2023-09-19 22:46:52,143] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 22:46:52] "[35m[1mGET /fornecedores HTTP/1.1[0m" 500 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+[2023-09-19 22:46:52,285] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  

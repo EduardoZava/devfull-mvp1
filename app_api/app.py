@@ -75,7 +75,7 @@ def get_fornecedores():
 
     if not fornecedores:
         # se não há fornecedores cadastrados
-        return {"fornecedor": []}, 200
+        return {"fornecedores": []}, 200
     else:
         logger.debug(f"%d fornecedores encontrados" % len(fornecedores))
         # retorna a representação de produto
