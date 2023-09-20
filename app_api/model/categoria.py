@@ -24,7 +24,7 @@ class Categoria(Base):
 
         Arguments:
             descricao_categoria: o texto descrevendo a categoria de produtos do forneedor
-            data_insercao: data de quando o comentário foi feito ou inserido à base
+            data_insercao: data de quando o categoria foi feito ou inserido à base
         """
         self.descricao_categoria = descricao_categoria
         if data_insercao:

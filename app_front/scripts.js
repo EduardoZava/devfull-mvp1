@@ -32,7 +32,7 @@ getList()
 */
 const postItem = async (inputFornecedor, inputDescription) => {
   const formData = new FormData();
-  formData.append('nome', inputProduct);
+  formData.append('nome', inputFornecedor);
   formData.append('descricao', inputDescription);
 
 
@@ -107,8 +107,8 @@ const deleteItem = (item) => {
   --------------------------------------------------------------------------------------
 */
 const newItem = () => {
-  let inputProduct = document.getElementById("newInput").value;
-  let inputQuantity = document.getElementById("newDescription").value;
+  let inputFornecedor = document.getElementById("newInput").value;
+  let inputDescriptiom = document.getElementById("newDescription").value;
   
 
   if (inputFornecedor === '') {
@@ -128,7 +128,7 @@ const newItem = () => {
   --------------------------------------------------------------------------------------
 */
 const insertList = (nameFornecedor, description) => {
-  var item = [nameProduct, quantity, price]
+  var item = [nameFornecedor, description]
   var table = document.getElementById('myTable');
   var row = table.insertRow();
 
