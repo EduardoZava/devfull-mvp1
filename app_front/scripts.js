@@ -4,13 +4,13 @@
   --------------------------------------------------------------------------------------
 */
 const getList = async () => {
-  let url = 'http://127.0.0.1:5000/produtos';
+  let url = 'http://127.0.0.1:5000/fornecedores';
   fetch(url, {
     method: 'get',
   })
     .then((response) => response.json())
     .then((data) => {
-      data.produtos.forEach(item => insertList(item.nome, item.quantidade, item.valor))
+      data.fornecedor.forEach(item => insertList(item.nome, item.descricao))
     })
     .catch((error) => {
       console.error('Error:', error);
@@ -30,13 +30,13 @@ getList()
   Função para colocar um item na lista do servidor via requisição POST
   --------------------------------------------------------------------------------------
 */
-const postItem = async (inputProduct, inputQuantity, inputPrice) => {
+const postItem = async (inputFornecedor, inputDescription) => {
   const formData = new FormData();
   formData.append('nome', inputProduct);
-  formData.append('quantidade', inputQuantity);
-  formData.append('valor', inputPrice);
+  formData.append('descricao', inputDescription);
 
-  let url = 'http://127.0.0.1:5000/produto';
+
+  let url = 'http://127.0.0.1:5000/fornecedor';
   fetch(url, {
     method: 'post',
     body: formData
@@ -91,7 +91,7 @@ const removeElement = () => {
 */
 const deleteItem = (item) => {
   console.log(item)
-  let url = 'http://127.0.0.1:5000/produto?nome=' + item;
+  let url = 'http://127.0.0.1:5000/fornecedor?nome=' + item;
   fetch(url, {
     method: 'delete'
   })
@@ -103,21 +103,21 @@ const deleteItem = (item) => {
 
 /*
   --------------------------------------------------------------------------------------
-  Função para adicionar um novo item com nome, quantidade e valor 
+  Função para adicionar um novo item com nome, descricao
   --------------------------------------------------------------------------------------
 */
 const newItem = () => {
   let inputProduct = document.getElementById("newInput").value;
-  let inputQuantity = document.getElementById("newQuantity").value;
-  let inputPrice = document.getElementById("newPrice").value;
+  let inputQuantity = document.getElementById("newDescription").value;
+  
 
-  if (inputProduct === '') {
+  if (inputFornecedor === '') {
     alert("Escreva o nome de um item!");
-  } else if (isNaN(inputQuantity) || isNaN(inputPrice)) {
-    alert("Quantidade e valor precisam ser números!");
+  } else if (isNaN(inputDescription) ) {
+    alert("Descricao deve ser preenchida!");
   } else {
-    insertList(inputProduct, inputQuantity, inputPrice)
-    postItem(inputProduct, inputQuantity, inputPrice)
+    insertList(inputFornecedor, inputDescription)
+    postItem(inputFornecedor, inputDescription)
     alert("Item adicionado!")
   }
 }
@@ -127,7 +127,7 @@ const newItem = () => {
   Função para inserir items na lista apresentada
   --------------------------------------------------------------------------------------
 */
-const insertList = (nameProduct, quantity, price) => {
+const insertList = (nameFornecedor, description) => {
   var item = [nameProduct, quantity, price]
   var table = document.getElementById('myTable');
   var row = table.insertRow();
@@ -138,8 +138,7 @@ const insertList = (nameProduct, quantity, price) => {
   }
   insertButton(row.insertCell(-1))
   document.getElementById("newInput").value = "";
-  document.getElementById("newQuantity").value = "";
-  document.getElementById("newPrice").value = "";
+  document.getElementById("newDescription").value = "";
 
   removeElement()
 }
