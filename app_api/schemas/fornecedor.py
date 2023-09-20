@@ -19,7 +19,7 @@ class FornecedorBuscaSchema(BaseModel):
     nome: str = "Teste"
 
 
-class ListagemFornecedorSchema(BaseModel):
+class ListagemFornecedoresSchema(BaseModel):
     """ Define como uma listagem de fornecedor será retornada.
     """
     fornecedor:List[FornecedorSchema]
