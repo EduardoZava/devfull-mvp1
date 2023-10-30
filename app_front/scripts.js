@@ -103,22 +103,23 @@ const deleteItem = (item) => {
 
 /*
   --------------------------------------------------------------------------------------
-  Função para adicionar um novo item com nome, descricao
+  Função para adicionar um novo Fornecedor com nome, descricao
   --------------------------------------------------------------------------------------
 */
 const newItem = () => {
+  console.log("newItem")
   let inputFornecedor = document.getElementById("newInput").value;
-  let inputDescriptiom = document.getElementById("newDescription").value;
+  let inputDescription = document.getElementById("newDescription").value;
   
 
   if (inputFornecedor === '') {
-    alert("Escreva o nome de um item!");
-  } else if (isNaN(inputDescription) ) {
+    alert("Preencha o nome do Fornecedor!");
+  } else if (inputDescription === '' ) {
     alert("Descricao deve ser preenchida!");
   } else {
     insertList(inputFornecedor, inputDescription)
     postItem(inputFornecedor, inputDescription)
-    alert("Item adicionado!")
+    alert("Fornecedor adicionado!")
   }
 }
 
