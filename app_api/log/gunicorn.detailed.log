@@ -38,3 +38,10 @@
 [2023-10-28 01:12:30,845] INFO _log() L224  127.0.0.1 - - [28/Oct/2023 01:12:30] "POST /fornecedor HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
 [2023-10-28 01:12:55,328] DEBUG add_fornecedor() L39   Adicionando fornecedor de nome: 'teste' - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L39  
 [2023-10-28 01:12:55,334] WARNING add_fornecedor() L53   Erro ao adicionar fornecedor 'teste', Fornecedor de mesmo nome já salvo na base :/ - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L53  
+[2023-10-28 01:12:55,338] INFO _log() L224  127.0.0.1 - - [28/Oct/2023 01:12:55] "[31m[1mPOST /fornecedor HTTP/1.1[0m" 409 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-10-28 18:56:10,188] INFO _log() L224  127.0.0.1 - - [28/Oct/2023 18:56:10] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-10-28 18:56:10,259] INFO _log() L224  127.0.0.1 - - [28/Oct/2023 18:56:10] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-10-28 18:56:10,259] INFO _log() L224  127.0.0.1 - - [28/Oct/2023 18:56:10] "GET /openapi/static/css/swagger-ui.css HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-10-28 18:56:10,264] INFO _log() L224  127.0.0.1 - - [28/Oct/2023 18:56:10] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-10-28 18:56:10,522] INFO _log() L224  127.0.0.1 - - [28/Oct/2023 18:56:10] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-10-28 18:56:10,532] INFO _log() L224  127.0.0.1 - - [28/Oct/2023 18:56:10] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
