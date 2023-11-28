@@ -116,8 +116,7 @@ const newItem = () => {
     alert("Preencha o nome do Fornecedor!");
   } else if (inputDescription === '' ) {
     alert("Descricao deve ser preenchida!");
-  } else {
-    insertList(inputFornecedor, inputDescription)
+  } else if (insertList(inputFornecedor, inputDescription)) {
     postItem(inputFornecedor, inputDescription)
     alert("Fornecedor adicionado!")
   }
@@ -132,6 +131,13 @@ const insertList = (nameFornecedor, description) => {
   var item = [nameFornecedor, description]
   var table = document.getElementById('myTable');
   var row = table.insertRow();
+
+  // Verifica se o fornecedor já existe na lista
+  var existingFornecedores = Array.from(table.getElementsByTagName('td'), cell => cell.textContent);
+  if (existingFornecedores.includes(nameFornecedor)) {
+     alert("Esse fornecedor já existe na lista!");
+    return;
+  }
 
   for (var i = 0; i < item.length; i++) {
     var cel = row.insertCell(i);

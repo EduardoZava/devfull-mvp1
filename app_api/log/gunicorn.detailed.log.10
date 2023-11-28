@@ -1,120 +1,62 @@
-[2023-09-19 22:46:52,287] ERROR log_exception() L1449 Exception on /fornecedores [GET] - call_trace=/home/ezava/.local/lib/python3.10/site-packages/flask/app.py L1449
-Traceback (most recent call last):
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
-    self.dialect.do_execute(
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.OperationalError: no such table: fornecedor
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/ezava/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ezava/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 109, in wrapper
-    resp = _do_wrapper(
-  File "/home/ezava/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
-    response = func(**request_kwargs)
-  File "/home/ezava/mypyproject/devfullmvp1/app_api/app.py", line 74, in get_fornecedores
-    fornecedores = session.query(Fornecedor).all()
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2772, in all
-    return self._iter().all()
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2907, in _iter
-    result = self.session.execute(
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1712, in execute
-    result = conn._execute_20(statement, params or {}, execution_options)
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1705, in _execute_20
-    return meth(self, args_10style, kwargs_10style, execution_options)
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 333, in _execute_on_connection
-    return connection._execute_clauseelement(
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1572, in _execute_clauseelement
-    ret = self._execute_context(
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1943, in _execute_context
-    self._handle_dbapi_exception(
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2124, in _handle_dbapi_exception
-    util.raise_(
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
-    raise exception
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
-    self.dialect.do_execute(
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: fornecedor
-[SQL: SELECT fornecedor.pk_fornecedor AS fornecedor_pk_fornecedor, fornecedor.nome AS fornecedor_nome, fornecedor.descricao AS fornecedor_descricao, fornecedor.data_insercao AS fornecedor_data_insercao 
-FROM fornecedor]
-(Background on this error at: https://sqlalche.me/e/14/e3q8)
-[2023-09-19 22:46:52,289] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 22:46:52] "[35m[1mGET /fornecedores HTTP/1.1[0m" 500 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
-[2023-09-19 22:46:52,440] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
-[2023-09-19 22:46:52,441] ERROR log_exception() L1449 Exception on /fornecedores [GET] - call_trace=/home/ezava/.local/lib/python3.10/site-packages/flask/app.py L1449
-Traceback (most recent call last):
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
-    self.dialect.do_execute(
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.OperationalError: no such table: fornecedor
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/ezava/.local/lib/python3.10/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/ezava/.local/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/home/ezava/.local/lib/python3.10/site-packages/flask_openapi3/scaffold.py", line 109, in wrapper
-    resp = _do_wrapper(
-  File "/home/ezava/.local/lib/python3.10/site-packages/flask_openapi3/do_wrapper.py", line 135, in _do_wrapper
-    response = func(**request_kwargs)
-  File "/home/ezava/mypyproject/devfullmvp1/app_api/app.py", line 74, in get_fornecedores
-    fornecedores = session.query(Fornecedor).all()
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2772, in all
-    return self._iter().all()
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 2907, in _iter
-    result = self.session.execute(
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1712, in execute
-    result = conn._execute_20(statement, params or {}, execution_options)
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1705, in _execute_20
-    return meth(self, args_10style, kwargs_10style, execution_options)
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 333, in _execute_on_connection
-    return connection._execute_clauseelement(
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1572, in _execute_clauseelement
-    ret = self._execute_context(
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1943, in _execute_context
-    self._handle_dbapi_exception(
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2124, in _handle_dbapi_exception
-    util.raise_(
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
-    raise exception
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
-    self.dialect.do_execute(
-  File "/home/ezava/.local/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: fornecedor
-[SQL: SELECT fornecedor.pk_fornecedor AS fornecedor_pk_fornecedor, fornecedor.nome AS fornecedor_nome, fornecedor.descricao AS fornecedor_descricao, fornecedor.data_insercao AS fornecedor_data_insercao 
-FROM fornecedor]
-(Background on this error at: https://sqlalche.me/e/14/e3q8)
-[2023-09-19 22:46:52,443] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 22:46:52] "[35m[1mGET /fornecedores HTTP/1.1[0m" 500 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
-[2023-09-19 22:55:31,794] INFO _log() L224  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+[2023-11-27 07:52:46,386] INFO _log() L224  [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
- * Running on http://192.168.0.131:5000 - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
-[2023-09-19 22:55:31,794] INFO _log() L224  [33mPress CTRL+C to quit[0m - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
-[2023-09-19 22:55:31,987] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
-[2023-09-19 22:55:31,998] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 22:55:31] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
-[2023-09-19 22:55:32,121] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
-[2023-09-19 22:55:32,123] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 22:55:32] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
-[2023-09-19 22:55:32,272] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=/home/ezava/mypyproject/devfullmvp1/app_api/app.py L70  
-[2023-09-19 22:55:32,274] INFO _log() L224  127.0.0.1 - - [19/Sep/2023 22:55:32] "GET /fornecedores HTTP/1.1" 200 - - call_trace=/home/ezava/.local/lib/python3.10/site-packages/werkzeug/_internal.py L224 
+ * Running on http://192.168.0.112:5000 - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:46,390] INFO _log() L224  [33mPress CTRL+C to quit[0m - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:46,404] INFO _log() L224   * Restarting with watchdog (windowsapi) - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:47,986] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:47,993] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:47,996] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:47] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:48,131] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:48,135] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:48,137] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:48] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:48,266] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:48,268] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:48,271] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:48] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:48,407] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:48,410] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:48,413] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:48] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:48,552] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:48,554] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:48,557] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:48] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:48,689] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:48,692] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:48,695] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:48] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:48,829] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:48,832] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:48,835] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:48] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:48,968] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:48,970] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:48,973] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:48] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:49,104] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:49,108] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:49,111] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:49] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:49,246] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:49,248] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:49,250] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:49] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:49,400] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:49,402] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:49,405] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:49] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:49,547] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:49,550] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:49,553] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:49] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:49,729] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:49,732] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:49,735] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:49] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:49,875] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:49,878] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:49,881] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:49] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:50,036] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:50,039] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:50,043] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:50] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:50,192] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:50,196] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:50,199] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:50] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:50,344] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:50,348] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:50,350] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:50] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:50,497] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:50,501] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  
+[2023-11-27 07:52:50,504] INFO _log() L224  127.0.0.1 - - [27/Nov/2023 07:52:50] "GET /fornecedores HTTP/1.1" 200 - - call_trace=C:\Users\lab\anaconda3\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-11-27 07:52:50,639] DEBUG get_fornecedores() L70   Coletando fornecedores  - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L70  
+[2023-11-27 07:52:50,642] DEBUG get_fornecedores() L80   7 fornecedores encontrados - call_trace=C:\dev\pyprojects\devfull-mvp1\app_api\app.py L80  

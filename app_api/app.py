@@ -90,12 +90,12 @@ def get_fornecedor(query: FornecedorBuscaSchema):
 
     Retorna uma representação dos fornecedores e categorias associados.
     """
-    fornecedor_id = query.id
+    fornecedor_id = query.nome
     logger.debug(f"Coletando dados sobre fornecedor #{fornecedor_id}")
     # criando conexão com a base
     session = Session()
     # fazendo a busca
-    fornecedor = session.query(Fornecedor).filter(Fornecedor.id == fornecedor_id).first()
+    fornecedor = session.query(Fornecedor).filter(Fornecedor.nome == fornecedor_id).first()
 
     if not fornecedor:
         # se o fornecedor não foi encontrado
